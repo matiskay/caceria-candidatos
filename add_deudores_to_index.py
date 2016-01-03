@@ -5,7 +5,7 @@ from elasticsearch import Elasticsearch
 
 es = Elasticsearch()
 
-with open("BASE_DE_DATOS_REGISTRO_DE_DEUDORES_POR_DELITO_AGRAVIO_ESTADO.CSV", "r") as handle:
+with open("data/BASE_DE_DATOS_REGISTRO_DE_DEUDORES_POR_DELITO_AGRAVIO_ESTADO.CSV", "r") as handle:
     data = handle.readlines()
 
 for raw_line in data:

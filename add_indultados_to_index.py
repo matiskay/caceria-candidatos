@@ -5,7 +5,7 @@ from elasticsearch import Elasticsearch
 
 es = Elasticsearch()
 
-with open("conmutados_cleaned.txt", "r") as handle:
+with open("data/conmutados_cleaned.txt", "r") as handle:
     data = handle.readlines()
 
 for raw_line in data:

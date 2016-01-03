@@ -5,7 +5,7 @@ from elasticsearch import Elasticsearch
 
 es = Elasticsearch()
 
-with open("todos_deudores_REDAM.tsv", "r") as handle:
+with open("data/todos_deudores_REDAM.tsv", "r") as handle:
     data = handle.readlines()
 
 for raw_line in data:
