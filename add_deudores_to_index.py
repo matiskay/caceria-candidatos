@@ -1,11 +1,18 @@
-"""Adds all data of "deudores al Estado" to our elasticsearch index.
-"""
+"""Adds all data of "deudores al Estado" to our elasticsearch index."""
+import sys
+
 from elasticsearch import Elasticsearch
 
 
+if len(sys.argv) < 2:
+    print("Enter input file as argument")
+    sys.exit(1)
+
+input_file = sys.argv[1].strip()
+
 es = Elasticsearch()
 
-with open("data/BASE_DE_DATOS_REGISTRO_DE_DEUDORES_POR_DELITO_AGRAVIO_ESTADO.CSV", "r") as handle:
+with open(input_file, "r") as handle:
     data = handle.readlines()
 
 for raw_line in data:
