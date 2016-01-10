@@ -13,10 +13,10 @@ def search(input_filename):
         res = es.search(index="great_db", q=name)
         for i in res['hits']['hits']:
             if i['_score'] >= 2.0:
-                out = "{0}\t{1}\t{2}\t{3}".format(
+                out = u"{0}\t{1}\t{2}\t{3}".format(
                     i['_score'], i['_source']['source'], name, i['_source']['raw_data'],
                 )
-                print(out)
+                print (out)
 
 
 def main():
