@@ -1,5 +1,5 @@
 # Instalación
-* crear virtualenvironment
+* crear virtualenvironment. Usar Python 3.
 * instalar requisitos: `pip install -r requirements.txt`
 * instalar elasticsearch
 * agregar datos a elasticsearch:
@@ -11,4 +11,3 @@
   indultados, etc:
     * `python search_from_list_of_names.py -i lista_de_nombres.txt`
 * profit.
-
