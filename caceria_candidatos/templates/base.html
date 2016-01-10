@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        {% load staticfiles %}
+        <title>{% block title %}Manolo Cazador{% endblock %}</title>
+        <link rel="stylesheet" href="{% static "bootstrap-3.3.6-dist/css/bootstrap.min.css" %}" />
+        <link rel="stylesheet" href="{% static "bootstrap-3.3.6-dist/css/bootstrap-theme.min.css" %}" />
+        <link rel="stylesheet" href="{% static "css/style.css" %}" />
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-static-top navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/"><img alt="Manolo Cazador" src="{% static "images/manolo_logo.svg" %}" /> Manolo Cazador</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+
+        <link rel="stylesheet" href="{% static "bootstrap-3.3.6-dist/js/bootstrap.min.js" %}" />
+    </body>
+</html>

@@ -1,0 +1,14 @@
+.navbar-brand img {
+    width: 20px;
+    display: inline;
+}
+
+.search-form {
+    margin-bottom: 25px;
+}
+
+.results-notice {
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-align: center;
+}
