@@ -1,7 +1,8 @@
-"""Adds all data of "deudores al Estado" to our elasticsearch index."""
+"""Add deudores al Estado to index"""
 import sys
 
 from elasticsearch import Elasticsearch
+from tqdm import tqdm
 
 
 if len(sys.argv) < 2:
@@ -15,7 +16,7 @@ es = Elasticsearch()
 with open(input_file, "r") as handle:
     data = handle.readlines()
 
-for raw_line in data:
+for raw_line in tqdm(data):
     line = raw_line.strip()
     fields = line.split("\t")
     doc = {
@@ -24,4 +25,3 @@ for raw_line in data:
     }
 
     res = es.index(index="great_db", doc_type="text", body=doc)
-    print("created: {}".format(res['created']))

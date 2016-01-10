@@ -1,5 +1,4 @@
-"""Adds all data of "REDAM" to our elasticsearch index.
-"""
+from tqdm import tqdm
 from elasticsearch import Elasticsearch
 
 
@@ -8,7 +7,7 @@ es = Elasticsearch()
 with open("data/todos_deudores_REDAM.tsv", "r") as handle:
     data = handle.readlines()
 
-for raw_line in data:
+for raw_line in tqdm(data):
     line = raw_line.strip()
     debtor = line.split("\t")
     doc = {
@@ -17,4 +16,3 @@ for raw_line in data:
     }
 
     res = es.index(index="great_db", doc_type="text", body=doc)
-    print("created: {}".format(res['created']))
