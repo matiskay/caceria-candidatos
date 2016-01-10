@@ -14,6 +14,11 @@
     * `python search_from_list_of_names.py -i lista_de_nombres.txt`
 * profit.
 
+## Instalación Django
+* Navegar hacia la carpeta `caceria_candidatos`.
+* Luego ejecutar el comando `python manage.py runserver`.
+* Abrir la pagina `http://127.0.0.1:8000/cazador/`.
+
 ## Ejemplo
 
 ```
