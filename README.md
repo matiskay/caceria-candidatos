@@ -1,6 +1,6 @@
 # Instalación
 * crear virtualenvironment
-* instalar requisitos: `pip install -r requirements`
+* instalar requisitos: `pip install -r requirements.txt`
 * instalar elasticsearch
 * agregar datos a elasticsearch:
     * `python add_redam_to_index.py`
